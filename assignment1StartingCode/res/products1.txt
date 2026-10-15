@@ -1,0 +1,11 @@
+10
+Jeans 54.46 63.25
+Dresses 16.67 20.82
+Shorts 79.82 83.5
+Jeans 92.99 169.9
+Jackets 75.95 104.97
+Shorts 48.02 70.71
+Shorts 20.86 68.57
+Shorts 44.98 117.02
+Shorts 77.81 176.19
+Jackets 70.01 143.2
