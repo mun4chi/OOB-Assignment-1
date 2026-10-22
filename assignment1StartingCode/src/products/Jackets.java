@@ -1,7 +1,7 @@
 package products;
 
 /**
- * Represents product type Jacket with an adjustment of 0.7.
+ * Shows a product type Jacket with an adjustment of 0.7.
  */
 
 public class Jackets extends Product {
@@ -21,7 +21,7 @@ public class Jackets extends Product {
 	}
 
 	/**
-	 * calculates the real difference of Jacket. Given adjustment value is multiplied
+	 * calculates the real difference of Jacket. The adjustment value is multiplied
 	 * by the absolute difference between original price and the updated price
 	 * 
 	 * @return adjusted absolute price difference.
