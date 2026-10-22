@@ -21,16 +21,14 @@ public class OriginalPriceComparator implements Comparator<Product> {
 	@Override
 	public int compare(Product p1, Product p2) {
 
-		if(p1.getOriginalPrice()< p2.getOriginalPrice()){
+		if (p1.getOriginalPrice() < p2.getOriginalPrice()) {
 			return -1;
-			
-	}
-	else if(p1.getOriginalPrice()== p2.getOriginalPrice()){
+
+		} else if (p1.getOriginalPrice() == p2.getOriginalPrice()) {
 			return 0;
-		
-	}
-     else {
-		return +1;
-	}
+
+		} else {
+			return +1;
+		}
 	}
 }
