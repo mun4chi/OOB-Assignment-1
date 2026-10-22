@@ -1,7 +1,7 @@
 package products;
 
 /**
- * Represents product type Dresses with an adjustment of 0.6.
+ *Shows the product type Dresses with an adjustment of 0.6.
  */
 
 public class Dresses extends Product {

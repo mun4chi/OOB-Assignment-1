@@ -21,7 +21,7 @@ public class Shorts extends Product {
 	}
 
 	/**
-	 * calculates the real difference of Shorts. Given adjustment value is multiplied
+	 * calculates the real difference of Shorts. The adjustment value is multiplied
 	 * by the absolute difference between original price and the updated price
 	 * 
 	 * @return adjusted absolute price difference.

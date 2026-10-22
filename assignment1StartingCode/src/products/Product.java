@@ -1,7 +1,7 @@
 package products;
 
 /**
- * Shows a generic product with its original and updated prices.
+ * Shows an abstract product with its original and updated prices.
  */
 
 public abstract class Product implements Comparable<Product> {
@@ -32,7 +32,7 @@ public abstract class Product implements Comparable<Product> {
 	}
 
 	/**
-	 * Returns the updated price of this product
+	 * returns the updated price of this product
 	 * 
 	 * @return the updated price.
 	 */
@@ -54,32 +54,27 @@ public abstract class Product implements Comparable<Product> {
 	 * Compares this product with another product by their real calculated
 	 * differences.
 	 * 
-	 * @param other the product to compare with
+	 * @param other the product to be compared
 	 * @return a negative number if this product's real difference is smaller, zero
-	 *         if they are equal or a positive number if it is larger.
+	 *         if they are equal or else a positive number if it is larger.
 	 */
 
 	@Override
 
 	public int compareTo(Product other) {
-		
-		if (this.calcRealDiff()<other.calcRealDiff()){
-			
+
+		if (this.calcRealDiff() < other.calcRealDiff()) {
+
 			return -1;
 		}
-			
-		else if (this.calcRealDiff()==other.calcRealDiff()) {
+
+		else if (this.calcRealDiff() == other.calcRealDiff()) {
 			return 0;
-			
-		}
-		else {
+
+		} else {
 			return +1;
-			
-			
+
 		}
-		
-		
-	
 
 	}
 }

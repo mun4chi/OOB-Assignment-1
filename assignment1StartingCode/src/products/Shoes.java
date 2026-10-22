@@ -13,15 +13,15 @@ public class Shoes extends Product {
 	/**
 	 * Creates a pair of Shoes  with Original and Updated price.
 	 * 
-	 * @param originalPrice Original price of this pair of Shoes.
-	 * @param updatedPrice  Updated price of this pair of Shoes.
+	 * @param originalPrice Original price of Shoes.
+	 * @param updatedPrice  Updated price of Shoes.
 	 */
 	public Shoes(double originalPrice, double updatedPrice) {
 		super(originalPrice, updatedPrice);
 	}
 
 	/**
-	 * calculates the real difference of Shoes. Given adjustment value is multiplied
+	 * calculates the real difference of Shoes. The adjustment value is multiplied
 	 * by the absolute difference between original price and the updated price
 	 * 
 	 * @return adjusted absolute price difference.

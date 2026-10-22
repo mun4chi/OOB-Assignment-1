@@ -21,7 +21,7 @@ public class Skirts extends Product {
 	}
 
 	/**
-	 * calculates the real difference of Skirt. Given adjustment value is multiplied
+	 * calculates the real difference of Skirt. The adjustment value is multiplied
 	 * by the absolute difference between original price and the updated price
 	 * 
 	 * @return adjusted absolute price difference.
