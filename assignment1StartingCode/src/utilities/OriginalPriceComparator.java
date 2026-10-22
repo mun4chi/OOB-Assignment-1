@@ -15,13 +15,22 @@ public class OriginalPriceComparator implements Comparator<Product> {
 	 * @param p1 is the first product
 	 * @param p2 is the second product
 	 * @return a negative number if p1's original price is smaller, zero if it is
-	 *         equal or a positive number is the price is larger.
+	 *         equal or else a positive number if it is larger.
 	 */
 
 	@Override
 	public int compare(Product p1, Product p2) {
 
-		return Double.compare(p1.getOriginalPrice(), p2.getOriginalPrice());
+		if(p1.getOriginalPrice()< p2.getOriginalPrice()){
+			return -1;
+			
 	}
-
+	else if(p1.getOriginalPrice()== p2.getOriginalPrice()){
+			return 0;
+		
+	}
+     else {
+		return +1;
+	}
+	}
 }

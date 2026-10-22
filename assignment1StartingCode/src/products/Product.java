@@ -62,7 +62,24 @@ public abstract class Product implements Comparable<Product> {
 	@Override
 
 	public int compareTo(Product other) {
-		return Double.compare(this.calcRealDiff(), other.calcRealDiff());
+		
+		if (this.calcRealDiff()<other.calcRealDiff()){
+			
+			return -1;
+		}
+			
+		else if (this.calcRealDiff()==other.calcRealDiff()) {
+			return 0;
+			
+		}
+		else {
+			return +1;
+			
+			
+		}
+		
+		
+	
 
 	}
 }

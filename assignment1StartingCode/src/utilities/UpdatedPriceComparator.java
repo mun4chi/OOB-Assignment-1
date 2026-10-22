@@ -15,13 +15,22 @@ public class UpdatedPriceComparator implements Comparator<Product> {
 	 * @param p1 the first product
 	 * @param p2 the second product
 	 * @return a negative number if p1's updated price is smaller, zero if it is
-	 *         equal or a positive number is the price is larger.
+	 *         equal or else a positive number if it  is larger.
 	 */
 
 	@Override
 	public int compare(Product p1, Product p2) {
 
-		return Double.compare(p1.getUpdatedPrice(), p2.getUpdatedPrice());
+		if(p1.getUpdatedPrice()< p2.getUpdatedPrice()) {
+			return -1;
+		}
+		else if(p1.getUpdatedPrice()== p2.getUpdatedPrice()) {
+			return 0;
+		
+		}
+		else {
+			return +1;
+		}
 	}
 
 }
