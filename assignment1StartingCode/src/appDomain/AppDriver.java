@@ -16,6 +16,10 @@ import products.Skirts;
 import products.TShirts;
 import utilities.OriginalPriceComparator;
 import utilities.Sorter;
+import utilities.BubbleSort;
+import utilities.HeapSort;
+import utilities.InsertionSort;
+import utilities.SelectionSort;
 import utilities.UpdatedPriceComparator;
 
 /**
@@ -47,7 +51,7 @@ public class AppDriver
 			+ "  -f  the data file name and path, e.g. -fproducts1.txt or -f\"res\\products1.txt\"\n"
 			+ "  -t  the compare type: o = original price, u = updated price, d = calculated difference\n"
 			+ "  -s  the sorting algorithm: b = bubble, s = selection, i = insertion,\n"
-			+ "      m = merge, q = quick, z = custom sort\n"
+			+ "      m = merge, q = quick, z = heap sort\n"
 			+ "Options are case insensitive, can be in any order, and must have no space\n"
 			+ "between the option and its value (e.g. -tO -sQ -fproducts2.txt).";
 
@@ -366,7 +370,8 @@ public class AppDriver
 
 	/**
 	 * Sorts the products in descending order with the chosen algorithm. If no
-	 * comparator is given, the products are compared with compareTo.
+	 * comparator is given, the products are compared with their compareTo
+	 * method (the Comparable interface).
 	 *
 	 * @param products   the array to sort
 	 * @param comparator the comparator to use, or null to use compareTo
@@ -374,31 +379,30 @@ public class AppDriver
 	 */
 	private static void sort( Product[] products, Comparator<Product> comparator, char sortType )
 	{
+		if( comparator == null )
+		{
+			comparator = ( a, b ) -> a.compareTo( b );
+		}
+
 		switch( sortType )
 		{
 			case 'b':
-				if( comparator == null ) Sorter.bubbleSort( products );
-				else Sorter.bubbleSort( products, comparator );
+				BubbleSort.sort( products, comparator );
 				break;
 			case 's':
-				if( comparator == null ) Sorter.selectionSort( products );
-				else Sorter.selectionSort( products, comparator );
+				SelectionSort.sort( products, comparator );
 				break;
 			case 'i':
-				if( comparator == null ) Sorter.insertionSort( products );
-				else Sorter.insertionSort( products, comparator );
+				InsertionSort.sort( products, comparator );
 				break;
 			case 'm':
-				if( comparator == null ) Sorter.mergeSort( products );
-				else Sorter.mergeSort( products, comparator );
+				Sorter.mergeSort( products, comparator );
 				break;
 			case 'q':
-				if( comparator == null ) Sorter.quickSort( products );
-				else Sorter.quickSort( products, comparator );
+				Sorter.quickSort( products, comparator );
 				break;
 			case 'z':
-				if( comparator == null ) Sorter.customSort( products );
-				else Sorter.customSort( products, comparator );
+				HeapSort.sort( products, comparator );
 				break;
 		}
 	}

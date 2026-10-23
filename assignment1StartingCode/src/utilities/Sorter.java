@@ -2,6 +2,8 @@ package utilities;
 
 import java.util.Comparator;
 
+import products.Product;
+
 /**
  * <p>
  * Sorter is a utility class containing static sorting algorithms that arrange
@@ -298,5 +300,10 @@ public final class Sorter
 		T temp = array[i];
 		array[i] = array[j];
 		array[j] = temp;
+	}
+
+	public static void bubbleSort(Product[] products, Comparator<Product> comparator) {
+		// TODO Auto-generated method stub
+		
 	}
 }
