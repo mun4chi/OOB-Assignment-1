@@ -8,8 +8,8 @@ import products.Product;
  */
 public class SelectionSort {
 	/**
-	 * Sorts the array in descending order.  The largest remaining
-	 * product is selected at every pass and swapped into the next spot.
+	 * Sorts the array in descending order. The largest remaining product is
+	 * selected at every pass and swapped into the next spot.
 	 * 
 	 * @param products   the array of products to sort
 	 * @param comparator the comparator used to compare two products
